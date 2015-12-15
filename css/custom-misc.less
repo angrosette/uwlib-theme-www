@@ -1,0 +1,55 @@
+/*Misc*/
+h1 { font-size: @font-size-h1; } 
+h2 { font-size: @font-size-h2; } 
+h3 { font-size: @font-size-h3; } 
+h4 { font-size: @font-size-h4; } 
+
+h1, h2, h3 {color: @fg-tan; font-weight: normal;}
+
+#main-content a {font-weight: bold;}
+
+dt, dd {padding: .5em 0;}
+dd {margin: auto 10px;}
+
+td, th {padding: 0.25em; vertical-align: top;}
+
+.tagline {
+	font-style: italic;
+	color: @gray;
+	padding: 1em 0;
+	margin: 20px 0;
+	.bordered(1px dotted @muted-tan);
+}
+
+.uwrestricted {
+	background: url("//www.lib.washington.edu/images2/graphics/lock/") no-repeat 0 center; 
+	padding-left: 15px; 
+	font-style: italic; 
+	color: #B88D00;
+}
+
+.hiddenStructure, .assistive-text {
+	position: absolute;
+	display: block;
+	height: 1px;
+	width: 1px;
+	margin-left: -5000px;
+}
+
+.discreet {
+	font-size: @font-size-small;
+	color: @gray;
+}
+
+.more {text-transform: uppercase;}
+.more, .hitlink a {font-weight: bold;}
+a.more:after, .hitlink a:after {content:"  \203A";}
+
+span.maplink {padding-left: 3em;}
+
+#main-content {
+	ul li {list-style: url("../img/gold-dot.png");}
+	li {margin-bottom: .5em;}
+}
+
+.alert {background-color: #C61029; color: #fff;}

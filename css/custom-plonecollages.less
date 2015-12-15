@@ -1,0 +1,206 @@
+
+// COLLAGES - COPIED FROM http://www.lib.washington.edu/portal_css/collage.css------------------
+
+@media screen and (min-width: 768px){
+	
+	/* collagerow layout */
+
+	.collage-quickedit {
+		float: right;
+	}
+	
+	#collage .collage-row {
+	  min-height:100%;
+	  margin-left:auto;
+	  margin-right:auto;
+	  text-align:left;
+	  position:relative;
+	  width: 100%;
+	  clear: both;
+	}
+	
+	
+	#collage div.collage-first-object,
+	#collage div.collage-first-object div.collage-item {
+	  margin-left: 0;
+	}
+	
+	#collage div.collage-last-object,
+	#collage div.collage-last-object div.collage-item {
+	  margin-right: 0;
+	}
+	
+	/*
+	#collage.edit .collage-row {
+	  border: 1px outset red;
+	  margin-bottom: 5px;
+	}
+	
+	#collage.edit .column-block {
+	  border: 1px outset blue;
+	  margin: 5px;
+	}
+	
+	#collage.edit .collage-item {
+	  border: 1px outset;
+	}
+	*/
+	
+	* html #collage .collage-row {
+	  width:100%;
+	  height:100%;
+	}
+	
+	#collage .block_1,
+	#collage .block_2,
+	#collage .block_3,
+	#collage .block_4,
+	#collage .block_5 {
+		float: left;
+	}
+	
+	.collage-item {
+		margin-bottom: 2em;
+	}
+	
+	/* column configurations */
+	
+	#collage .one-column .block_1 {
+		width: 100%;
+	}
+	
+	#collage .two-columns-equal .block_1 {
+	  width:49.49%;
+	}
+	
+	#collage .two-columns-equal .block_2 { width:49.49%; }
+	
+	#collage .three-columns-equal .block_1,
+	#collage .three-columns-equal .block_2,
+	#collage .three-columns-equal .block_3 {
+		width:32.5%;
+	}
+	
+	#collage .three-columns-equal .block_2 { width:32.9%; }
+	
+	#collage .four-columns-equal .block_1,
+	#collage .four-columns-equal .block_2,
+	#collage .four-columns-equal .block_3,
+	#collage .four-columns-equal .block_4 {
+		width: 24.2%;
+	}
+	
+	#collage .four-columns-equal .block_2 { width: 24.4%; }
+	
+	#collage .five-columns-equal .block_1,
+	#collage .five-columns-equal .block_2,
+	#collage .five-columns-equal .block_3,
+	#collage .five-columns-equal .block_4,
+	#collage .five-columns-equal .block_5 {
+		width: 19.2%;
+	}
+	
+	#collage .five-columns-equal .block_2 { width: 19.2%; }
+	
+	#collage .block_2,
+	#collage .block_4,
+	#collage .block_3,
+	#collage .block_4,
+	#collage .block_5,
+	#collage .block_6 {
+	  padding-left: 1%;
+	}
+	
+	#collage .two-columns-largeleft .block_1 {
+		width: 59%;
+	}
+	#collage .two-columns-largeleft .block_2 {
+		width: 40%;
+	}
+	
+	#collage .three-columns-largeleft .block_1 {
+		width:59%;
+	}
+	
+	#collage .three-columns-largeleft .block_2 {
+	  width:19%;
+	}
+	
+	#collage .three-columns-largeleft .block_3 {
+	  width: 20%;
+	}
+	
+	#collage .four-columns-largeleft .block_1 {
+		width: 40%;
+	}
+	
+	#collage .four-columns-largeleft .block_2,
+	#collage .four-columns-largeleft .block_3,
+	#collage .four-columns-largeleft .block_4 {
+	  width: 19%;
+	}
+	
+	#collage .five-columns-largeleft .block_1 {
+		width: 24%;
+	}
+	#collage .five-columns-largeleft .block_2,
+	#collage .five-columns-largeleft .block_3,
+	#collage .five-columns-largeleft .block_4,
+	#collage .five-columns-largeleft .block_5 {
+	  width: 18%;
+	}
+	
+	#collage .two-columns-largeright .block_2 {
+		width: 59%;
+	}
+	#collage .two-columns-largeright .block_1 {
+		width: 40%;
+	}
+	
+	#collage .three-columns-largeright .block_3 {
+		width:59%;
+	}
+	
+	#collage .three-columns-largeright .block_1 {
+		width: 20%;
+	}
+	
+	#collage .three-columns-largeright .block_2 {
+	  width:19%;
+	}
+	
+	#collage .four-columns-largeright .block_1,
+	#collage .four-columns-largeright .block_2,
+	#collage .four-columns-largeright .block_3 {
+	  width: 19%;
+	}
+	#collage .four-columns-largeright .block_4 {
+		width: 40%;
+	}
+	
+	#collage .five-columns-largeright .block_1,
+	#collage .five-columns-largeright .block_2,
+	#collage .five-columns-largeright .block_3,
+	#collage .five-columns-largeright .block_4 {
+	  width: 18%;
+	}
+	#collage .five-columns-largeright .block_5 {
+		width: 24%;
+	}
+	
+	/* styles for hiding unwanted document metadata and actions */
+	
+	#collage .collage-item .documentByLine,
+	#collage .collage-item .link-parent{
+		display: none;
+	}
+	
+	/* styles for unbatched-layout */
+	
+	#collage .unbatched-with-1 .column-block { width: 100%; }
+	#collage .unbatched-with-2 .column-block { width: 49.5%; }
+	#collage .unbatched-with-3 .column-block { width: 32.5%; }
+	#collage .unbatched-with-4 .column-block { width: 24.25%; }
+	#collage .unbatched-with-5 .column-block { width: 19%; }
+	#collage .unbatched-with-6 .column-block { width: 16.5%; }
+}

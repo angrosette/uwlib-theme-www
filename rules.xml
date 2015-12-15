@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules 
+	xmlns="http://namespaces.plone.org/diazo" 
+	xmlns:css="http://namespaces.plone.org/diazo/css" 
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">	
+	<xsl:variable name="portal_url" select="//a[@id='portal-logo']/@href"/>
+	<xsl:variable name="theme_url" select="concat($portal_url, '/++theme++uwlib.diazotheme/')"/>
+	
+	<!--notheme for tinymce popups-->
+	<notheme if-path="presentation_view"/> 
+	<notheme if-path="image_view_fullscreen "/> 
+	<notheme if-path="source_editor.htm"/> 
+	<notheme if-path="ploneimage.htm"/> 
+	<notheme if-path="anchor.htm"/> 
+	<notheme if-path="table.htm"/> 
+	<notheme if-path="attributes.htm"/>
+
+	<!-- PLAIN PAGE VARIANT / NO HEADER OR FOOTER -->
+	<theme href="plainpage.html" if-path="about/contact/chat"/>
+	
+	<!-- MAIN THEME applies only to content pages-->
+	<rules css:if-content="#visual-portal-wrapper">
+		<theme href="theme.html"/>
+		<drop css:content="#breadcrumbs-you-are-here"/>
+		<drop css:content=".documentActions"/>
+		<drop content="//fieldset[@id='relatedItemBox']"/>
+		<drop css:content="#category"/>
+		<drop theme="/html/head/link"/>
+		<drop theme="/html/head/script"/>
+		<!-- Pull in Plone files -->
+		<before css:theme-children="head" content="/html/head/link | /html/head/style" />
+		<before css:theme-children="head" content="/html/head/script"/>
+	  	<before css:theme-children="head" content="/html/head/meta"/>
+		
+		<replace css:theme="title" css:content="title"/>
+		<merge attributes="class" css:content="body" css:theme="body"/>
+		
+		<!--if left OR right portlet column exists, replace contents, otherwise drop from theme-->
+		<replace css:theme-children="#side-navigation" css:content-children="#portal-column-one" css:if-content="#portal-column-one"/>
+		<drop css:theme="#side-navigation" css:if-not-content="#portal-column-one"/>
+		<drop css:theme="#sectiontitlebar .btn-offcanvas" css:if-not-content="#portal-column-one"/>
+		<replace css:theme-children="#secondary-content" css:content-children="#portal-column-two" css:if-content="#portal-column-two"/>
+		<drop css:theme="#secondary-content" css:if-not-content="#portal-column-two"/>
+		
+		<!--add size(class) of main-content column-->
+		<before css:theme-children="#main-content" method="raw">
+		  <xsl:attribute name="class">
+			  <xsl:value-of select="//div[@id='main-content']/@class" />
+			  <xsl:choose>
+				<xsl:when css:test="#portal-column-one">
+					<xsl:choose>
+						<xsl:when css:test="#portal-column-two">main-offcanvas main-content col-xs-12 col-sm-6</xsl:when>
+						<xsl:otherwise>main-offcanvas main-content col-xs-12 col-sm-9</xsl:otherwise>
+					</xsl:choose>
+				</xsl:when>
+				<xsl:when css:test="#portal-column-two">
+					<xsl:choose>
+						<xsl:when css:test="#portal-column-one">main-offcanvas main-content col-xs-12 col-sm-6</xsl:when>
+						<xsl:otherwise>main-offcanvas main-content col-xs-12 col-sm-9</xsl:otherwise>
+					</xsl:choose>
+				</xsl:when>
+				<xsl:otherwise>main-offcanvas main-content col-xs-12 col-sm-12</xsl:otherwise>
+			  </xsl:choose>
+		  </xsl:attribute>
+		</before>
+		
+		<!--insert main content-->
+		<replace css:theme-children="#main-content" css:content-children="#portal-column-content"/>
+		
+		<!--inserts breadcrumbs inside main-content-->
+		<before css:theme-children="#main-content" css:content="#portal-breadcrumbs"/>
+		
+		<!--add title to sectiontitlebar -->
+		<after theme-children="//div[@id='sectiontitlebar']/h3" content="//span[@id='breadcrumbs-1']"/>
+		
+		<!-- clean up unnecessary content classes/id-->
+		<drop attributes="class id" css:content="h1"/>
+	</rules>
+</rules>

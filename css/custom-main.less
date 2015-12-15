@@ -1,0 +1,427 @@
+
+
+//UWLIB-RESPONSIVE-THEME 2013; updated 4.15 tawataoc@uw.edu
+
+// Global----------------------------------------
+
+html, body {padding: 0; margin: 0;}
+
+#branding {
+	#search {
+		.searchadv {font-size: @font-size-small;}		
+		a {color: @white;}
+	}
+}
+
+#header {
+    background-color: @uw-purple;
+    position: relative;
+	min-height:45px;
+}
+
+.patch {
+	background: url("../img/patch.png") no-repeat 0 0 @uw-purple;
+	background-size: 100% 100%;
+	display: block;
+	height: 45px;
+	position: absolute;
+	text-indent: -999px;
+	top: 0px;
+	width: 65px;
+	z-index: 3001;
+}
+.wordmark {
+	background: url("../img/wordmark.png") no-repeat 0 0 @uw-purple;
+	background-size: 100% 100%;
+	display: block;
+	position: absolute;
+	top: 0px;
+	left: 80px;
+	height: 45px;
+	overflow: hidden;
+	text-indent: -9999px;
+	width: 130px;
+	z-index: 3002;
+}
+
+#thin-strip {min-height: 45px !important;}
+
+#sectiontitlebar {
+	background-image: url("../img/default-bg.jpg");
+	background-size: cover; 
+	background-repeat: repeat-x;
+	background-color: @bg-light;
+	background-position: center top;
+	color: #fff;
+	min-height: 38px;
+	.btn-offcanvas {
+		height: 38px; 
+		width: 38px;  
+		background-color: @uw-gold;
+		.icon-bar {
+			background-color: #fff;
+			border-radius: 0;
+			display: block;
+			height: 2px;
+			width: 14px;
+			margin: 2px 10px;
+		}
+		.icon-bar:first-child {
+			width: 22px;
+			margin-top: 10px;
+		}
+	}
+	h3 {
+		margin: 0; 
+		padding: 0; 
+		color: @white;
+		.EncodeSansCompressed800;
+		line-height: normal;
+	}
+	a {color: #fff;}
+	.breadcrumbSeparator {color: @uw-purple;}
+}
+
+// HORIZONTAL NAVBAR ------------------------
+#uwlib-navbar-container {
+	margin-left: -15px;
+	margin-right: -15px;
+	background-color: transparent;
+	min-height: 45px;
+	position: relative;
+	margin-bottom: 0;
+	border: none;
+	button.navbar-toggle {
+		z-index: 3000;
+		border:none;
+		box-shadow:none;
+		padding: 10px;
+		margin: 6px 15px 5px 0; // adds up to 45px;
+		.icon-bar {background-color: #fff;}
+	}
+	button.navbar-toggle:before {
+		color: @white;
+		background-color:@uw-purple;
+		content: "MENU";
+		font-size: 10px;
+		position: absolute;
+		right: 50px;
+		top: 10px;
+	}
+	.navbar-collapse {
+		border: none;
+		background-color: #fff;
+	
+		li {list-style: none;}
+		.dropdown-menu {
+			li {
+				list-style: none;
+				padding: 5px;
+				font-size: @font-size-small;
+				color: @gray;
+				line-height: 1.4em;
+			}
+			a {
+				display:block; 
+				padding: 5px 0;
+				font-size: @font-size-base;
+				font-weight: bold;
+			}
+		}
+	}
+}	
+
+#ask-menu {		
+	.dropdown-toggle {
+		color: @uw-gold; 
+		font-size: 1.5em;
+		text-transform: lowercase;
+	}
+}
+
+
+
+/* LAYOUT*/
+
+#outerwrap {margin: 0 auto;}
+#wrap {margin: 0 auto;}
+
+.row-offcanvas-left { 
+	overflow: hidden;
+    position: relative;
+}
+
+.sidebar-offcanvas {
+	max-height: 100%;
+    min-height: 30px;
+    overflow: hidden; 
+    position: absolute;
+	top: 0;
+	left: -100%;
+	float: left;
+	.transition(all 0.25s ease-out 0s);
+	}
+	
+.main-offcanvas {
+	.transition(all 0.25s ease-out 0s);
+}
+
+#side-navigation {
+	background-color: @bg-light;
+	height: 100%;
+	font-size: @font-size-small;
+}
+
+#content {padding-bottom: 30px;}
+
+.main-content > * {padding: 0 10px;}
+
+#secondary-content .visualPadding {
+	height: 100%;
+	font-size: @font-size-small;
+	border-left: 1px solid @gray-lighter;
+	padding-left: 15px;
+}
+
+/* LEFT COLUMN VISIBLE */
+.row-offcanvas-left.active .main-offcanvas {
+	left: 220px;
+	position: relative;	
+}	
+
+.row-offcanvas-left.active .sidebar-offcanvas {
+	overflow: visible;
+	left: 0;
+	width: 220px !important;
+}
+
+footer {
+	font-size: @font-size-small;
+	
+	#footer-main {
+		background: @uw-purple;
+		color: @white;
+		min-height: 30px;
+		padding-top: 5px;
+		text-align: center;
+		a {color: @white;}
+	}
+}
+
+/* ACCORDIONS and ACCORDIONHOURS */
+.accordion, #AccordionHours {
+	background-color:#fff; 
+	border:1px solid #ddd; 
+	border-top:none; 
+	h3 {
+		background: @bg-tan; 
+		margin:0; 
+		padding:0 0.5em; 
+		font-size: @font-size-small; 
+		border-top:1px solid #ddd; 
+		cursor:pointer; 
+	}
+	h3.current {
+		background: @white; 
+		border-bottom:1px solid #fff;
+	}
+	div {
+		border:1px solid @white; 
+		border-width:0 2px; 
+		padding: 0.5em;
+	}
+}
+#AccordionHours {
+	max-width: 500px;
+	.dateheading {
+		background: @green; 
+		color: #ffffff; 
+		padding: 3px; 
+		margin: 1em 0;
+	}
+	table {
+		width: 100%;
+		margin-left: 0;
+	}
+	td, th {vertical-align:top;}
+	.days {
+		width: 8em; 
+		padding-right: 1em; 
+		text-align:right;
+	}
+}
+
+// IE FIX
+#ie6, #ie7, #ie8 {
+	.visible-phone {display: block !important;}
+	.nav-tabs {background-color: transparent !important;}
+	.nav-tabs > .active > a, .nav > li > a:hover, .nav > li > a:focus, #search-panes {background-color: #4B2E83 !important;}
+}
+
+
+// Medium---------------------------------------------
+@media (min-width: @screen-sm-min){
+	.patch {
+		height: 65px;
+		width: 95px;
+	}
+	.wordmark {
+		height: 65px;
+		width: 200px;
+		left: 125px;
+	}
+
+	#branding {
+		position: relative;
+		z-index: 1;
+		#search {
+			padding: 30px;
+			width: auto;
+		}
+	}
+	#header {
+		margin: auto;
+		position: relative;
+		z-index: 2;
+	}
+
+	#thin-strip {
+		height: 65px;
+		width: 100%;
+		background: @uw-purple;
+		position: absolute;
+		visibility: visible;
+		z-index: 1;
+		ul {
+			margin: 0;
+			position: relative;
+			z-index: 1;
+			font-weight: 700;
+			padding: 20px;
+			float: right;
+		}		
+		li {
+			display:inline-block;
+			list-style: none;
+			a {
+				color: #fff;
+				font-size: 14px;
+				position: relative;
+				padding: 8px 25px 10px 0;
+				letter-spacing: .01em;
+				.EncodeSansCompressed600;
+			}
+			a:after{
+				position: absolute;
+				right: 6px;
+				height: 32px;
+				width: 2px;
+				top: 2px;
+				content: "";
+				border-right: 1px solid @gray-light;
+				transform: skewX(165deg);
+				transform-origin: top;
+				-webkit-transform: skewX(165deg);
+				-webkit-transform-origin: 0 0;
+				-ms-transform: skewX(165deg);
+				-ms-transform-origin: 0 0;
+			}
+			a:hover, a:focus {
+				color: @muted-tan;
+			}
+		} 
+		li:last-child a:after {
+			display: none;
+		}		
+	}
+	
+	
+	.navbar .btn-navbar:before {
+		top: 22px;
+	}
+
+	#sectiontitlebar {
+		min-height: 120px;
+		h3 {
+			line-height: 40px; 
+			font-size: 40px;
+			padding: 30px;
+		}
+	}
+	.row-offcanvas-left, .main-offcanvas { 
+		overflow: visible;
+		left: 0;	
+	}
+	.sidebar-offcanvas {
+		position: relative;
+		left: 0;
+	}
+	
+	// custom columns from old theme
+	div.colhalf {float: left; width: 48%; margin: 0 1%;}
+	div.colthird {float: left; width: 31%; margin: 0 1%;}
+	div.col2third {float: left; width: 64%; margin: 0 1%;}
+	div.colquarter {float: left; width: 23%; margin: 0 1%;}
+	div.col3quarter {float: left; width: 73%; margin: 0 1%;}
+	
+	// IE FIX
+	#ie6, #ie7, #ie8 {
+		.visible-phone {display: none !important;}
+	}
+}
+
+// Large: navbar expanded, title larger----------------------------------------------
+@media (min-width: @screen-md-min){
+	#header {height: 125px;}
+	#uwlib-navbar-container {
+		background-color: #fff;
+		margin-top: 65px;
+		#uwlib-navbar .navbar-nav {
+			text-transform: uppercase; 
+			.EncodeSansCompressed800; 
+			font-size: 18px;
+			.dropdown-menu {
+				text-transform: none;
+				font-family: @font-family-sans-serif;
+				font-size: 10px;
+				font-weight: normal;
+				border-top: 5px solid @uw-purple;
+				margin-top: -5px;
+				a { display: block; font-weight: bold; padding-top: .75em; font-size: 14px; color: @link-color;}
+			}
+		}
+
+		#ask-menu {
+			.dropdown-toggle {
+				background: url("../img/header-sprite.png") no-repeat 70px -240px;
+				padding: 15px 85px 5px 0px;
+				line-height: 40px;
+				font-family: Open Sans, sans-serif;
+				font-weight: 400;
+				font-size: 22px;
+			}
+			.qwidget {
+				background: url("//www.lib.washington.edu/images2/photos/qwidget-face") no-repeat; 
+				padding-left: 50px; 
+				min-height: 40px;
+			}
+		}
+	}	
+	ul.dropdown-menu {margin-top: 0px;
+		width: 500px;
+	}
+	.menu-block {
+		width: 47%;
+		margin-left: 3%;
+		float: left;
+	}
+	.navbar .nav > li > .dropdown-menu:before {
+		left: 59px;
+	}
+	.navbar .nav > li > .dropdown-menu:after {
+		left: 60px;
+	}
+	
+
+}
+

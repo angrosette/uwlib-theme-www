@@ -1,0 +1,87 @@
+// PLONE CLASSES-----------------
+table.invisible {visibility: visible;}
+table.grid {.table-bordered}
+table.listing {.table}
+tr.even {background-color: @bg-light;}
+
+.crumb, #portal-breadcrumbs { 
+	font-size: .75em; 
+	text-transform: uppercase;
+	padding-bottom: 1em;
+	a {font-weight: normal;}
+}
+
+.navTree {
+	list-style: none;
+	padding-left: 1em;
+	margin: 0;
+	li {padding: .5em 0; list-style: none;}
+}
+.navTreeTopNode {text-transform: uppercase;}
+.navTreeCurrentItem {font-weight: bold;}
+
+.documentDescription { 
+	font-size: @font-size-small;
+	margin: 1em 0;
+	font-weight: bold;
+}
+
+.visualHighlight {
+	background-color: @uw-gold;
+}
+
+.image-right {float: right; margin: .5em 0 .5em .5em;}
+.image-left {float: left; margin: .5em .5em .5em 0;}
+
+// PORTLETS
+
+#side-navigation .portletStaticText {
+	.bordered(1px dotted @muted-tan);
+	margin: 10px;
+	padding: 1em 0;
+}
+
+.portlet {
+	.bordered(1px solid @uw-gold);
+	padding: 1em 0;
+}
+
+.portletNavigationTree {
+	border: none;
+	padding: 0;
+}
+
+.portletRss, .portletCollection {
+	.bordered(1px solid #000);
+	padding: 0;
+	.portletHeader, .portletFooter {
+		background-color: @bg-tan;
+		margin: 0;
+		padding: .25em;
+	}
+	.portletFooter {text-align: right;}
+}
+
+.portletItem {padding-top: .5em; }
+
+.portletItemDetails {
+	display: block;
+	text-align: right;
+	color: @gray-light;
+}
+
+#collage > img {
+	width: 100%;
+}
+
+.collage_view_portlet .portlet {
+	.bordered(5px solid @uw-gold);
+	padding: 1em;
+	.portletFooter {display: none;}
+	.portletHeader { color: @fg-tan;}
+}
+
+.collage_view_featured {
+	background-color: #F6F4EB;
+	padding: 1em;
+}

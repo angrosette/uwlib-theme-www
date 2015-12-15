@@ -1,0 +1,31 @@
+#content {
+	// Core variables and mixins
+	@import "uwlib-variables.less"; // Modify this for custom colors, font-sizes, etc
+	@import "less/mixins.less";
+
+	// CSS Reset
+	@import "less/reset.less";
+
+	// Base CSS
+	@import "less/type.less";
+	@import "less/tables.less";
+
+	// Custom/overrides
+	@import "custom-misc.less";
+	@import "custom-plone.less";  // Styles for plone-specific classes
+	.alert {
+	  padding: 8px 35px 8px 14px;
+	  margin-bottom: @baseLineHeight;
+	  background-color: @warningBackground;
+	  border: 1px solid @warningBorder;
+	  .border-radius(@baseBorderRadius);
+	}
+	.alert,
+	.alert h4 {
+	  // Specified for the h4 to prevent conflicts of changing @headingsColor
+	  color: @warningText;
+	}
+	.alert h4 {
+	  margin: 0;
+	}
+}
