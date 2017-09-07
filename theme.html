@@ -41,7 +41,6 @@
   
   <!--MAIN NAVBAR-->
   <nav id="uwlib-navbar-container" class="navbar navbar-default" role="navigation" aria-label="Main menu">
-    <h3 class="sr-only">Main menu</h3>
     <div class="container-fluid">
 	<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">	
@@ -67,7 +66,7 @@
 						  <li class="menu-item"><a href="http://guides.lib.uw.edu/research">Research Guides</a> Librarian recommended resources &amp; research tips tailored to your topic.</li>
 						</div>
 						<div class="menu-block">
-						  <li class="menu-item"><a href="http://guides.lib.uw.edu/research/citations">Citation Styles &amp; Tools</a> Quick MLA, APA, and Chicago style guides for bibliographies; citation management software info.</li>
+						  <li class="menu-item"><a href="http://guides.lib.uw.edu/research/citations">Citation Styles &amp; Tools</a> Quick MLA, APA, and Chicago style guides for bibliographies; tools for storing and organizing sources.</li>
 						  <li class="menu-item"><a href="http://www.lib.washington.edu/types/course">Course Reserves</a> Library materials reserved for your classes.</li>
 						  <li class="menu-item"><a href="http://www.lib.washington.edu/types/collections">Collections &amp; Archives</a> Unique online and physical collections on specific subjects, in distinct formats, and in special archives.</li>
 						  <li class="menu-item"><a href="http://guides.lib.uw.edu/research/mobile">Mobile Search Tools</a> Mobile-optimized research databases and library-related mobile apps.</li>
@@ -84,7 +83,7 @@
 						  <li class="menu-item"><a href="http://www.lib.washington.edu/services/computers">Computers &amp; Printing</a> Computers, printers, and scanners in the Libraries.</li>
 						</div>
 						<div class="menu-block">
-						  <li class="menu-item"><a href="http://www.lib.washington.edu/ill">Interlibrary Loan &amp; Document Delivery Service</a> Get PDFs of print articles delivered via email and borrow items not held at UW.</li>
+						  <li class="menu-item"><a href="http://www.lib.washington.edu/ill">Interlibrary Loan &amp; Scanning Services</a> Get PDFs of print articles delivered via email and borrow items not held at UW.</li>
 						  <li class="menu-item"><a href="http://www.lib.washington.edu/services/borrow/lib38">Borrowing &#038; Access</a> What you can check out from the Libraries, how long, renewals, and returns.</li>
 						  <li class="menu-item"><a class="more" href="http://www.lib.washington.edu/services">more<span class="sr-only"> on using the Libraries</span></a></li>
 						</div>
@@ -135,10 +134,9 @@
 						  <li class="menu-item"><a href="http://www.questionpoint.org/crs/servlet/org.oclc.admin.BuildForm?&amp;page=frame&amp;institution=10082&amp;type=2&amp;language=1">Chat</a> Get help 24/7 with this real-time chat service.</li>
 						  <li class="menu-item"><a href="http://www.lib.washington.edu/about/contact.html">Email</a> Get answers to less-urgent questions and comments via email.</li>
 						  <li class="menu-item"><a href="http://www.lib.washington.edu/about/hours">Phone</a> Reach us during regular business hours. Main: 206-543-0242</li>
-						  <li class="menu-item"><a href="http://www.lib.washington.edu/about/contact/text">Text</a> Send us questions via text message.</li>
 						</div>
 						<div class="menu-block">
-						  <li class="menu-item"><a href="http://www.lib.washington.edu/chat.html" target="_blank" class="qwidget" title="(actual librarian may vary)">Click to chat now with a UW librarian</a></li>
+						  <li class="menu-item"><a href="http://www.lib.washington.edu/chat.html" target="_blank" class="qwidget" title="(actual librarian may vary)">Click to chat online now with a UW librarian</a></li>
 						  <li class="menu-item"><a class="more" href="http://www.lib.washington.edu/about/contact">more<span class="sr-only"> ways to contact us</span></a></li>
 						</div>
 					</ul>
@@ -151,37 +149,6 @@
   </div>
 	<!--LIBALERTS-->
 	<div id="libAlerts"></div>
-      <!--SEARCH-->
-    <div id="search" class="pull-right hidden-xs">
-		<script type="text/javascript"> 
-			function searchPrimoEverything() {
-				var querytemp = document.getElementById("primoQueryTempEverything").value;
-				document.getElementById("primoQueryEverything").value = "any,contains," + querytemp;
-				document.forms["searchFormEverything"].submit();
-			}
-		</script>
-		<form id="searchFormEverything" name="searchFormEverything" class="main-search" method="get" target="_self" action="http://alliance-primo.hosted.exlibrisgroup.com/primo_library/libweb/action/dlSearch.do" enctype="application/x-www-form-urlencoded; charset=utf-8" onsubmit="searchPrimoEverything()">
-		<!-- Customizable Parameters -->
-			<input type="hidden" name="institution" value="UW">
-			<input type="hidden" name="vid" value="UW">
-			<input type="hidden" name="tab" value="default_tab">
-			<input type="hidden" name="search_scope" value="all">
-			<input type="hidden" name="mode" value="Basic">
-		<!-- Fixed parameters  -->
-			<input type="hidden" name="group" value="GUEST">
-			<input type="hidden" name="onCampus" value="true">
-			<input type="hidden" name="displayMode" value="full">
-			<input type="hidden" id="primoQueryEverything" name="query">
-			<input type="hidden" name="highlight" value="true">
-			<input type="hidden" name="displayField" value="all">
-			<input type="hidden" name="pcAvailabiltyMode" value="true">
-			<input type="hidden" id="bulkSize" name="bulkSize" value="50"/>
-			<label for="primoQueryTempEverything" class="sr-only">Articles, Books + More</label>
-			<input type="text" id="primoQueryTempEverything" value="" placeholder="Articles, Books + More" class="search-query">				
-		<!-- Search Button  -->
-			<input id="go" title="UW Libraries Search" onclick="searchPrimoEverything()" type="button" value="Search" alt="UW Libraries Search"><br />
-		<span class="searchadv"><a href="http://alliance-primo.hosted.exlibrisgroup.com/primo_library/libweb/action/search.do?mode=Advanced&amp;ct=AdvancedSearch&amp;dscnt=0&amp;vid=UW">Advanced Search</a> | <a href="http://www.lib.washington.edu/search">Site Search</a></span></form>
-    </div>
 </div>
 
 <div id="outerwrap">
