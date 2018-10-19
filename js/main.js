@@ -53,5 +53,5 @@ $(document).ready(function() {
   })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
   ga('create', 'UA-54313424-1', 'auto');
   ga('send', 'pageview');
-  ga('set', 'anonymizeIp', true);
+  ga('set', 'anonymizeIp', true);  
 });
