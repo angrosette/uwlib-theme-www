@@ -71,7 +71,7 @@
 		<before css:theme-children="#main-content" css:content="#portal-breadcrumbs"/>
 		
 		<!--add title to sectiontitlebar -->
-		<after theme-children="//div[@id='sectiontitlebar']/h3" content="//span[@id='breadcrumbs-1']"/>
+		<after theme-children="//div[@id='sectiontitlebar']/div" content="//span[@id='breadcrumbs-1']"/>
 		
 		<!-- clean up unnecessary content classes/id-->
 		<drop attributes="class id" css:content="h1"/>
