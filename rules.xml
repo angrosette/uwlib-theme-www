@@ -14,9 +14,6 @@
 	<notheme if-path="anchor.htm"/> 
 	<notheme if-path="table.htm"/> 
 	<notheme if-path="attributes.htm"/>
-
-	<!-- PLAIN PAGE VARIANT / NO HEADER OR FOOTER -->
-	<theme href="plainpage.html" if-path="about/contact/chat"/>
 	
 	<!-- MAIN THEME applies only to content pages-->
 	<rules css:if-content="#visual-portal-wrapper">
