@@ -15,6 +15,9 @@
 	<notheme if-path="table.htm"/> 
 	<notheme if-path="attributes.htm"/>
 	
+	<!-- define Theme template for front-page -->
+    <theme href="default.html" css:if-content="body.section-front-page" />
+	
 	<!-- MAIN THEME applies only to content pages-->
 	<rules css:if-content="#visual-portal-wrapper">
 		<theme href="theme.html"/>
