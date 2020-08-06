@@ -6,20 +6,21 @@
 	<xsl:variable name="portal_url" select="//a[@id='portal-logo']/@href"/>
 	<xsl:variable name="theme_url" select="concat($portal_url, '/++theme++uwlib.diazotheme/')"/>
 	
-	<!--notheme for tinymce popups-->
-	<notheme if-path="presentation_view"/> 
-	<notheme if-path="image_view_fullscreen "/> 
-	<notheme if-path="source_editor.htm"/> 
-	<notheme if-path="ploneimage.htm"/> 
-	<notheme if-path="anchor.htm"/> 
-	<notheme if-path="table.htm"/> 
-	<notheme if-path="attributes.htm"/>
-	
-	<!-- define Theme template for front-page -->
-    <theme href="default.html" css:if-content="body.section-homepage" />
-	
 	<!-- MAIN THEME applies only to content pages-->
 	<rules css:if-content="#visual-portal-wrapper">
+		<!--notheme for tinymce popups-->
+		<notheme if-path="presentation_view"/> 
+		<notheme if-path="image_view_fullscreen "/> 
+		<notheme if-path="source_editor.htm"/> 
+		<notheme if-path="ploneimage.htm"/> 
+		<notheme if-path="anchor.htm"/> 
+		<notheme if-path="table.htm"/> 
+		<notheme if-path="attributes.htm"/>
+
+		<!-- define theme template for homepage -->
+		<theme href="default.html" css:if-content="body.section-homepage" />
+		
+		<!-- define theme template for all other pages -->
 		<theme href="theme.html"/>
 		<drop css:content="#breadcrumbs-you-are-here"/>
 		<drop css:content=".documentActions"/>
